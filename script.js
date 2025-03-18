@@ -209,16 +209,19 @@ function createMenuWidget(widget) {
 }
 
 function addMenuOptions(element, values) {
-    values.forEach(value => {
-        if (value.text !== '*') {
-            const option = document.createElement('option');
-            option.textContent = value.text || '';
-            option.value = value.text || '';
-            if (value.destination) {
-                option.dataset.destination = value.destination;
-            }
-            element.appendChild(option);
+    // Filter out duplicates based on text value while keeping the first occurrence
+    const uniqueValues = values.filter((value, index, self) => 
+        value.text !== '*' && self.findIndex(v => v.text === value.text) === index
+    );
+    
+    uniqueValues.forEach(value => {
+        const option = document.createElement('option');
+        option.textContent = value.text || '';
+        option.value = value.text || '';
+        if (value.destination) {
+            option.dataset.destination = value.destination;
         }
+        element.appendChild(option);
     });
 }
 

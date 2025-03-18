@@ -5,6 +5,20 @@ const data = {
         "id": "i671144",
         "slide_name": "ONE",
         "widgets": [
+            {
+                "rect": "505,106,605,136",
+                "type": "typeahead",
+                "values": [
+                  { "destination": "i671142", "mode": "default", "text": "ONE" },
+                  { "coaching": "930385", "mode": "default", "text": "TWO" },
+                  { "coaching": "930386", "mode": "default", "text": "THREE" },
+                  { "coaching": "930387", "text": "*" }
+                ],
+                "widget_unique_key": "L3keFbdITSpp",
+                "help": "Select a slide to navigate",
+                "pulse": { "text": "Choose Option", "toggle": false },
+                "placeholder": "Search..."
+              },
           {
             "destination": "i671147",
             "rect": "14,104,130,154",
@@ -13,6 +27,21 @@ const data = {
             "help": "Click to navigate to slide TWO",
             "pulse": { "text": "Navigate", "toggle": false },
             "placeholder": "Click here"
+          },
+          {
+            "rect": "700,106,605,136",
+            "styles": {
+              "background-color": "#000000",
+              "color": "#e90c0c",
+              "font-family": "Arial",
+              "font-size": "17px"
+            },
+            "text": "SLIDE ONE",
+            "type": "text",
+            "widget_unique_key": "R2XvFR4kllaB",
+            "help": "Displays the slide title",
+            "pulse": { "text": "Important Info", "toggle": false },
+            "placeholder": "Enter text here"
           }
         ]
       },
@@ -71,16 +100,19 @@ const data = {
             "pulse": { "text": "Choose Option", "toggle": false },
             "placeholder": "Select an option"
           },
-          
           {
-            "rect": "626,118,751,145",
-            "type": "image",
-            "values":[],
-            "toggle":false,
+            "rect": "505,106,605,136",
+            "type": "typeahead",
+            "values": [
+              { "destination": "i671142", "mode": "default", "text": "ONE" },
+              { "coaching": "930385", "mode": "default", "text": "TWO" },
+              { "coaching": "930386", "mode": "default", "text": "THREE" },
+              { "coaching": "930387", "text": "*" }
+            ],
             "widget_unique_key": "L3keFbdITSpp",
             "help": "Select a slide to navigate",
             "pulse": { "text": "Choose Option", "toggle": false },
-            "placeholder": "Select an option"
+            "placeholder": "Search..."
           }
         ]
       },
@@ -90,37 +122,38 @@ const data = {
         "slide_name": "FIVE",
         "widgets": [
           {
-            "rect": "626,118,751,145",
+            "rect": "156,417,307,434",
             "type": "datepicker",
             "values": [
-              { "destination": "i671145", "text": "2025-02-28" },
+              { "destination": "i671141", "mode": "default", "text": "2023-01-01" },
               { "coaching": "930388", "text": "*" }
             ],
-            "widget_unique_key": "aftjGiIUgCDU",
-            "help": "Pick a date",
-            "pulse": { "text": "Select Date", "toggle": false },
-            "placeholder": "YYYY-MM-DD"
-          },
-          {
-            "destination": "i671144",
-            "rect": "392,161,479,184",
-            "text": "REFRESH",
-            "type": "button",
-            "widget_unique_key": "uDKo7QWF0cqN",
-            "help": "Click to refresh the slide",
-            "pulse": { "text": "Refresh", "toggle": false },
-            "placeholder": "Click to refresh"
+            "widget_unique_key": "L3keFbdITSpp",
+            "help": "Select a date",
+            "pulse": { "text": "Choose Date", "toggle": false },
+            "placeholder": "Select a date"
           }
         ]
       },
       {
         "file": "SIX.png",
-        "id": "i671145",
-        "simcomplete": "true",
+        "id": "i671141",
         "slide_name": "SIX",
-        "widgets": []
+        "simcomplete": "true",
+        "widgets": [
+          {
+            "rect": "156,417,307,434",
+            "type": "image",
+            "src": "ONE.png",
+            "alt": "Sample image",
+            "widget_unique_key": "L3keFbdITSpp",
+            "help": "Click to toggle visibility",
+            "pulse": { "text": "Click Me", "toggle": false },
+            "placeholder": "Image"
+          }
+        ]
       }
-    ],
-    "version": "2.0"
-}
+    ]
+  };
   
+export default data;
